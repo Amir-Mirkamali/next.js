@@ -167,7 +167,7 @@ export async function imageOptimizer(
             'Cache-Control',
             isStatic
               ? 'public, max-age=315360000, immutable'
-              : 'public, max-age=0, must-revalidate'
+              : 'public, max-age=31536000'
           )
           if (sendEtagResponse(req, res, etag)) {
             return { finished: true }
